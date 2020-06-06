@@ -30,9 +30,7 @@ public class EmployeeValidator {
         return errors;
     }
 
-
-
- // 社員番号
+    // 社員番号
     private static String _validateCode(String code, Boolean code_duplicate_check_flag) {
         // 必須入力チェック
         if(code == null || code.equals("")) {
@@ -71,7 +69,4 @@ public class EmployeeValidator {
         }
         return "";
     }
-
-
-
 }

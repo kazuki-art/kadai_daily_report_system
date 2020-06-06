@@ -13,12 +13,10 @@ public class DBUtil {
     }
 
     private static EntityManagerFactory _getEntityManagerFactory() {
-        // TODO 自動生成されたメソッド・スタブ
         if(emf == null) {
             emf = Persistence.createEntityManagerFactory(PERSISTENCE_UNIT_NAME);
-
         }
+
         return emf;
     }
-
 }

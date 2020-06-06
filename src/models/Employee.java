@@ -16,7 +16,6 @@ import javax.persistence.Table;
     @NamedQuery(
             name = "getAllEmployees",
             query = "SELECT e FROM Employee AS e ORDER BY e.id DESC"
-
             ),
     @NamedQuery(
             name = "getEmployeesCount",
@@ -28,7 +27,7 @@ import javax.persistence.Table;
             ),
     @NamedQuery(
             name = "checkLoginCodeAndPassword",
-            query = "SELECT COUNT(e) FROM Employee AS e WHERE e.delete_flag = 0 AND e.code = :code AND e.password = :pass"
+            query = "SELECT e FROM Employee AS e WHERE e.delete_flag = 0 AND e.code = :code AND e.password = :pass"
             )
 })
 @Entity
@@ -44,7 +43,7 @@ public class Employee {
     @Column(name = "name", nullable = false)
     private String name;
 
-    @Column(name = "password", length = 64,nullable = false)
+    @Column(name = "password", length = 64, nullable = false)
     private String password;
 
     @Column(name = "admin_flag", nullable = false)
@@ -103,8 +102,16 @@ public class Employee {
         return created_at;
     }
 
-    public void setAdmin_flag(Timestamp created_at) {
+    public void setCreated_at(Timestamp created_at) {
         this.created_at = created_at;
+    }
+
+    public Timestamp getUpdated_at() {
+        return updated_at;
+    }
+
+    public void setUpdated_at(Timestamp updated_at) {
+        this.updated_at = updated_at;
     }
 
     public Integer getDelete_flag() {
@@ -114,6 +121,4 @@ public class Employee {
     public void setDelete_flag(Integer delete_flag) {
         this.delete_flag = delete_flag;
     }
-
-
 }
