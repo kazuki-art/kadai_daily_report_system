@@ -17,6 +17,18 @@
                       <th>日付</th>
                       <td><fmt:formatDate value="${report.report_date}" pattern="yyyy-MM-dd" /></td>
                   </tr>
+                   <tr>
+                      <th>出勤時間</th>
+                      <td>
+                      <pre><c:out value="${report.start}" /></pre>
+                      </td>
+                  </tr>
+                   <tr>
+                      <th>退勤時間</th>
+                      <td>
+                      <pre><c:out value="${report.finish}" /></pre>
+                      </td>
+                  </tr>
                   <tr>
                       <th>内容</th>
                       <td>

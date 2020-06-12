@@ -38,6 +38,7 @@ public class TopPageIndexServlet extends HttpServlet {
         EntityManager em = DBUtil.createEntityManager();
 
         Employee login_employee = (Employee)request.getSession().getAttribute("login_employee");
+
         int page;
         try{
             page = Integer.parseInt(request.getParameter("page"));
@@ -45,15 +46,14 @@ public class TopPageIndexServlet extends HttpServlet {
             page = 1;
         }
         List<Report> reports = em.createNamedQuery("getMyAllReports", Report.class)
-                                 .setParameter("employee", login_employee)
-                                 .setFirstResult(15 * (page - 1))
-                                 .setMaxResults(15)
-                                 .getResultList();
+                                  .setParameter("employee", login_employee)
+                                  .setFirstResult(15 * (page - 1))
+                                  .setMaxResults(15)
+                                  .getResultList();
 
         long reports_count = (long)em.createNamedQuery("getMyReportsCount", Long.class)
-                                        .setParameter("employee", login_employee)
-                                        .getSingleResult();
-
+                                     .setParameter("employee", login_employee)
+                                     .getSingleResult();
 
         em.close();
 
