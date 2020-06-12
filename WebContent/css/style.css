@@ -150,11 +150,19 @@ table#report_list .report_date {
 }
 
 table#report_list .report_title {
-    width: 37%;
+    width: 20%;
+}
+
+table#report_list .report_start {
+    width: 20%;
+}
+
+table#report_list .report_finish {
+    width: 20%;
 }
 
 table#report_list .report_action {
-    width: 13%;
+    width: 20%;
 }
 
 pre {
@@ -164,3 +172,6 @@ pre {
 h3 {
     font-size: larger;
 }
+
+
+
