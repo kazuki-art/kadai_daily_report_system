@@ -54,6 +54,8 @@ public class ReportsCreateServlet extends HttpServlet {
             }
 
             r.setReport_date(report_date);
+            r.setStart(request.getParameter("start"));
+            r.setFinish(request.getParameter("finish"));
 
             r.setTitle(request.getParameter("title"));
             r.setContent(request.getParameter("content"));
