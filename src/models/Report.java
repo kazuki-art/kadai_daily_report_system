@@ -49,11 +49,12 @@ public class Report {
     @Column(name = "report_date", nullable = false)
     private Date report_date;
 
-    @Column(name = "start_date_time",nullable = false)
-    private int start_date_time;
 
-    @Column(name = "end_date_time",nullable = false)
-    private int end_date_time;
+    @Column(name = "start_time", length = 255, nullable = false)
+    private String start_time;
+
+   @Column(name = "finish_time", length = 255, nullable = false)
+    private  String finish_time;
 
     @Column(name = "title", length = 255, nullable = false)
     private String title;
@@ -95,20 +96,20 @@ public class Report {
 
     }
 
-    public int getStart_date_time() {
-        return start_date_time;
+    public  String getStart_time() {
+        return start_time;
     }
 
-    public void setStart_date_time(int start_date_time) {
-        this.start_date_time = start_date_time;
+    public void setStart_time(String start_time) {
+        this.start_time = start_time;
     }
 
-    public int getEnd_date_time() {
-        return end_date_time;
+    public  String getFinish_time() {
+        return finish_time;
     }
 
-    public void setEnd_date_time(int end_date_time) {
-        this.end_date_time = end_date_time;
+    public void setFinish_time(String finish_time) {
+        this.finish_time = finish_time;
     }
 
 

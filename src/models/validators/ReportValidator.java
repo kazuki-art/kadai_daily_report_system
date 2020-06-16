@@ -19,8 +19,36 @@ public class ReportValidator {
             errors.add(content_error);
         }
 
+        /*String start_date_time_error = _validateStart_date_time(r.getStart_date_time());
+        if(!start_date_time_error.equals("")) {
+            errors.add(start_date_time_error);
+        }
+
+        String end_date_time_error = _validateEnd_date_time(r.getEnd_date_time());
+        if(!end_date_time_error.equals("")) {
+            errors.add(end_date_time_error);
+        }*/
+
         return errors;
     }
+
+
+    /*private static String _validateEnd_date_time(Integer end_date_time) {
+        // TODO 自動生成されたメソッド・スタブ
+        if(end_date_time == null || end_date_time.equals("")) {
+            return "退勤時間を入力してください。";
+        }
+        return "";
+    }
+
+
+    private static String _validateStart_date_time(Integer start_date_time) {
+        // TODO 自動生成されたメソッド・スタブ
+        if(start_date_time == null || start_date_time.equals("")) {
+            return "出勤時間を入力してください。";
+        }
+        return "";
+    }*/
 
 
     private static String _validateTitle(String title) {

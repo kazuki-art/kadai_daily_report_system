@@ -19,12 +19,12 @@
 <c:out value="${sessionScope.login_employee.name}" />
 <br /><br />
 
-<label for="start_date_time">出勤時間</label><br />
-<input type="text" name="start_date_time" value="${report.start_date_time}" />
+<label for="start_time">出勤時間</label><br />
+<input type="text" name="start_time" value="${report.start_time}" />
 <br /><br />
 
-<label for="end_date_time">退勤時間</label><br />
-<input type="text" name="end_date_time" value="${report.end_date_time}" />
+<label for="finish_time">退勤時間</label><br />
+<input type="text" name="finish_time" value="${report.finish_time}" />
 <br /><br />
 
 <label for="title">タイトル</label><br />
